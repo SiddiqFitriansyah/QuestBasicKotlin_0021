@@ -133,4 +133,30 @@ println(firstEven)
 val sumOfNumbers = numbers.sum()
 println(sumOfNumbers)
 
+// Contoh penggunaan sorted
+val sortedNumbers = listOf(5, 2, 8, 1, 9).sorted()
+println(sortedNumbers)
+
+val sortedDescending = listOf(5, 2, 8, 1, 9).sortedDescending()
+println(sortedDescending)
+
+/*
+ * Sequence
+ * Sequence adalah collection yang dievaluasi secara lazy (malas). Ini berarti operasi pada sequence dieksekusi satu per satu pada setiap elemen, bukan pada seluruh collection sekaligus.
+ * Ini bisa lebih efisien untuk collection besar karena tidak membuat collection menengah.
+ */
+
+// Contoh penggunaan Sequence
+val sequenceNumbers = generateSequence(1) { it + 1 }
+val firstFiveEven = sequenceNumbers.filter { it % 2 == 0 }.take(5).toList()
+println(firstFiveEven)
+
+// Contoh penggunaan fold
+val foldResult = listOf(1, 2, 3).fold(10) { acc, value -> acc + value }
+println(foldResult)
+
+// Contoh penggunaan reduce
+val reduceResult = listOf(1, 2, 3).reduce { acc, value -> acc + value }
+println(reduceResult)
+
 }
