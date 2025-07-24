@@ -27,3 +27,42 @@ fun ConditionalStatement() {
         7 -> println("Saturday")
         else -> println("Invalid Day")
     }
+
+    // Try-Catch
+    val value = "10"
+    try {
+        val result = value.toInt()
+        println("Result: $result")
+    } catch (e: NumberFormatException) {
+        println("Invalid Number")
+    }
+}
+
+fun Perulangan() {
+    println()
+    println("=== Perulangan ===")
+
+    // For loop
+    for (i in 1..5) {
+        println("Perulangan ke-$i")
+    }
+
+    val cars = listOf("BMW", "Toyota", "Honda", "Audi")
+    for (car in cars) {
+        println("Car Type: $car")
+    }
+
+    // While loop
+    var x = 1
+    while (x <= 5) {
+        println("Perulangan ke-$x")
+        x++
+    }
+
+    // Do-While loop
+    var y = 1
+    do {
+        println("Perulangan ke-$y")
+        y++
+    } while (y <= 5)
+}
