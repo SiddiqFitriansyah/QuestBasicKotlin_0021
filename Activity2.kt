@@ -101,4 +101,20 @@ println(mutableCapital)
  * Kotlin menyediakan banyak fungsi untuk memanipulasi collection, seperti filter, map, forEach, dll.
  */
 
+ // Contoh penggunaan filter
+val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val evenNumbers = numbers.filter { it % 2 == 0 }
+println(evenNumbers)
+
+// Contoh penggunaan map
+val doubledNumbers = numbers.map { it * 2 }
+println(doubledNumbers)
+
+// Contoh penggunaan forEach
+numbers.forEach { println(it) }
+
+// Contoh penggunaan any
+val anyEven = numbers.any { it % 2 == 0 }
+println(anyEven)
+
 }
