@@ -117,4 +117,20 @@ numbers.forEach { println(it) }
 val anyEven = numbers.any { it % 2 == 0 }
 println(anyEven)
 
+// Contoh penggunaan all
+val allEven = numbers.all { it % 2 == 0 }
+println(allEven)
+
+// Contoh penggunaan count
+val countEven = numbers.count { it % 2 == 0 }
+println(countEven)
+
+// Contoh penggunaan find
+val firstEven = numbers.find { it % 2 == 0 }
+println(firstEven)
+
+// Contoh penggunaan sum
+val sumOfNumbers = numbers.sum()
+println(sumOfNumbers)
+
 }
