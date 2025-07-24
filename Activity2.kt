@@ -47,4 +47,58 @@ println(mutableList)
  * Untuk membuat Set, kita bisa menggunakan fungsi setOf() atau mutableSetOf().
  */
 
+ // Contoh penggunaan Set
+val integerSet = setOf(1, 2, 4, 2, 1, 5)
+println(integerSet)
+
+val setA = setOf(1, 2, 4, 2, 1, 5)
+val setB = setOf(1, 2, 4, 5)
+println(setA == setB) // Membandingkan dua Set
+
+println(5 in setA) // Memeriksa apakah elemen ada di Set
+
+val mutableSet = mutableSetOf(1, 2, 4, 2, 1, 5)
+mutableSet.add(6) // Menambah elemen baru
+mutableSet.remove(1) // Menghapus elemen
+println(mutableSet)
+
+/*
+ * Map
+ * Map adalah collection yang menyimpan data dalam pasangan kunci-nilai (key-value pair).
+ * Setiap kunci dalam Map harus unik. Jika Anda mencoba menambahkan pasangan dengan kunci yang sudah ada, nilai yang lama akan ditimpa.
+ * Map tidak mempertahankan urutan elemen yang dimasukkan.
+ * Untuk membuat Map, kita bisa menggunakan fungsi mapOf() atau mutableMapOf().
+ */
+
+// Contoh penggunaan Map
+val capital = mapOf(
+    "Jakarta" to "Indonesia",
+    "London" to "England",
+    "New Delhi" to "India"
+)
+
+println(capital["Jakarta"]) // Mengakses nilai menggunakan kunci
+println(capital.getValue("London")) // Mengakses nilai menggunakan kunci (akan melempar exception jika kunci tidak ditemukan)
+
+val mapKeys = capital.keys // Mendapatkan semua kunci
+println(mapKeys)
+
+val mapValues = capital.values // Mendapatkan semua nilai
+println(mapValues)
+
+val mutableCapital = mutableMapOf(
+    "Jakarta" to "Indonesia",
+    "London" to "England",
+    "New Delhi" to "India"
+)
+
+mutableCapital.put("Amsterdam", "Netherlands") // Menambah pasangan kunci-nilai
+mutableCapital.remove("London") // Menghapus pasangan kunci-nilai
+println(mutableCapital)
+
+/*
+ * Collection Operations
+ * Kotlin menyediakan banyak fungsi untuk memanipulasi collection, seperti filter, map, forEach, dll.
+ */
+
 }
